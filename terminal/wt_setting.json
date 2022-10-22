@@ -1,0 +1,64 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": 
+    [
+        {
+            "command": "paste",
+            "keys": "ctrl+v"
+        },
+        {
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "keys": "ctrl+c"
+        },
+        {
+            "command": "find",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "keys": "alt+shift+d"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+shift+w"
+        },
+        {
+            "command": "unbound",
+            "keys": ""
+        },
+        {
+            "command": "closePane",
+            "keys": "ctrl+shift+w"
+        },
+        {
+            "command": "toggleFocusMode",
+            "keys": "alt+z"
+        }
+    ],
+    "alwaysOnTop": false,
+    "alwaysShowTabs": false,
+    "copyFormatting": "none",
+    "copyOnSelect": false,
+    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "focusFollowMouse": true,
+    "initialCols": 98,
+    "initialPosition": "138,100",
+    "initialRows": 27,
+    "minimizeToNotificationArea": false,
+    
+  
+    "showTabsInTitlebar": true,
+    "startOnUserLogin": false,
+    "tabSwitcherMode": "mru",
+    "useAcrylicInTabRow": false
+}
