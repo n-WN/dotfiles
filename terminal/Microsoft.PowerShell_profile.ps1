@@ -1,20 +1,13 @@
 oh-my-posh init pwsh --config 'C:\Users\jyf\scoop\apps\oh-my-posh\current\themes\pure.omp.json' | Invoke-Expression
-Import-Module posh-git
-Import-Module PSFzf
-Import-Module -Name Terminal-Icons
-Import-Module PSReadLine
-
 
 # Set-PSReadlineKeyHandler -Key Tab -Function Complete # 设置 Tab 键补全
 Set-PSReadLineOption -PredictionSource History 
-Set-PSReadLineKeyHandler -Key Tab  -Function MenuComplete # 设置 Ctrl+d为菜单补全和 Intellisense
+Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete # 设置 Ctrl+d为菜单补全和
 Set-PSReadLineKeyHandler -Key "Ctrl+z" -Function Undo # 设置 Ctrl+z 为撤销
-Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward #设置向上键为后向搜索历史记录
-Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward #设置向下键为前向搜索历史纪录
-Set-PSReadLineOption -EditMode vi
+Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
+Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
+# Set-PSReadLineOption -EditMode vi -- dont do it
 Set-PSReadLineOption -BellStyle None
-
-Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
 
 function pro { vim $profile }
 function ll { ls.exe -la }
