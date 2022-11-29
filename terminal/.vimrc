@@ -1,1 +1,0 @@
-C:/Users/jyf/_vimrc
