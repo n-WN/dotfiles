@@ -1,0 +1,70 @@
+{
+    "log": {
+        "loglevel": "warning",
+		"access": "/var/log/v2ray/access.log",
+		"error": "/var/log/v2ray/error.log"
+    },
+    "routing": {
+        "domainStrategy": "AsIs",
+        "rules": [
+            {
+                "type": "field",
+                "ip": [
+                    "geoip:private",
+                    "geoip:cn"
+                ],
+                "outboundTag": "block"
+            }
+        ]
+    },
+    "inbounds": [
+        {
+			"listen": "0.0.0.0",
+            "port": 10086,
+            "protocol": "vless",
+            "settings": {
+                "clients": [
+                    {
+						"id": "b831381d-6324-4d53-ad4f-8cda48b30811",
+						"level": 0,
+                        "email": "jyfserendipity@outlook.com"
+					}
+				],
+				"decryption": "none",
+				"fallbacks": [
+					{
+						"alpn": "http/1.1",
+						"dest": 80
+					},
+					{
+						"alpn": "h2",
+						"dest": 81
+					}
+				]
+			},
+			"streamSettings": {
+				"network": "ws",
+				"security": "tls",
+				"tlsSettings": {
+					"alpn": ["http/1.1","h2"],
+					"certificates": [
+						{
+							"certificateFile": "/etc/nginx/cert/server.pem",
+							"keyFile": "/etc/nginx/cert/private_unsecure.key"
+						}
+					]
+				}
+			}
+		}
+	],
+	"outbounds": [
+		{
+			"protocol": "freedom",
+			"tag": "direct"
+		},
+		{
+			"protocol": "blackhole",
+			"tag": "block"
+		}
+	]
+}
