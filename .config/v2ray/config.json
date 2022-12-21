@@ -19,9 +19,9 @@
     },
     "inbounds": [
         {
-			"listen": "0.0.0.0",
-            "port": 10086,
-            "protocol": "vless",
+			"listen": "127.0.0.1",
+            "port": 12345,
+            "protocol": "vmess",
             "settings": {
                 "clients": [
                     {
@@ -29,30 +29,12 @@
 						"level": 0,
                         "email": "jyfserendipity@outlook.com"
 					}
-				],
-				"decryption": "none",
-				"fallbacks": [
-					{
-						"alpn": "http/1.1",
-						"dest": 80
-					},
-					{
-						"alpn": "h2",
-						"dest": 81
-					}
 				]
 			},
 			"streamSettings": {
 				"network": "ws",
-				"security": "tls",
-				"tlsSettings": {
-					"alpn": ["http/1.1","h2"],
-					"certificates": [
-						{
-							"certificateFile": "/etc/nginx/cert/server.pem",
-							"keyFile": "/etc/nginx/cert/private_unsecure.key"
-						}
-					]
+				"wsSettings": {
+					"path": "/api/"
 				}
 			}
 		}
