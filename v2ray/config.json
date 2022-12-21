@@ -49,7 +49,7 @@
 					"serverName": "www.wycjyf.live"
 				},
 				"wsSettings": {
-					"path": "/api/"
+					"path": "/iamff/"
 				}
 			},
 			"tag": "proxy"
