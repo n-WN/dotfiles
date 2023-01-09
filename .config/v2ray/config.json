@@ -20,7 +20,7 @@
     "inbounds": [
         {
 			"listen": "127.0.0.1",
-            "port": 12345,
+            "port": 10086,
             "protocol": "vmess",
             "settings": {
                 "clients": [
@@ -34,7 +34,7 @@
 			"streamSettings": {
 				"network": "ws",
 				"wsSettings": {
-					"path": "/api/"
+					"path": "/iamff/"
 				}
 			}
 		}
