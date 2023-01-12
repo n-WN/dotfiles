@@ -14,6 +14,11 @@ function pro { vim $profile }
 function ll { ls.exe -al }
 function l { ls.exe -al }
 
+function pic {
+	  Set-Clipboard (-join ('![](' , $(picgo u | tail -n 1),')' ))
+	  Get-ClipBoard
+}
+
 function setproxy{
 	$env:HTTP_PROXY="127.0.0.1:10809" 
 		$env:HTTPS_PROXY="127.0.0.1:10809"

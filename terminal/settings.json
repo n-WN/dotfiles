@@ -4,8 +4,8 @@
     "actions": 
     [
         {
-            "command": "paste",
-            "keys": "ctrl+v"
+            "command": "find",
+            "keys": "ctrl+shift+f"
         },
         {
             "command": 
@@ -16,8 +16,16 @@
             "keys": "ctrl+c"
         },
         {
-            "command": "find",
-            "keys": "ctrl+shift+f"
+            "command": "paste",
+            "keys": "ctrl+v"
+        },
+        {
+            "command": 
+            {
+                "action": "globalSummon",
+                "toggleVisibility": true
+            },
+            "keys": "ctrl+shift+m"
         },
         {
             "command": 
@@ -29,12 +37,8 @@
             "keys": "alt+shift+d"
         },
         {
-            "command": 
-            {
-                "action": "globalSummon",
-                "toggleVisibility": true
-            },
-            "keys": "ctrl+shift+m"
+            "command": "closePane",
+            "keys": "ctrl+shift+w"
         },
         {
             "command": "unbound",
@@ -43,10 +47,6 @@
         {
             "command": "unbound",
             "keys": ""
-        },
-        {
-            "command": "closePane",
-            "keys": "ctrl+shift+w"
         },
         {
             "command": "toggleFocusMode",
@@ -58,7 +58,7 @@
     "alwaysShowTabs": false,
     "centerOnLaunch": true,
     "copyFormatting": "none",
-    "copyOnSelect": false,
+    "copyOnSelect": true,
     "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
     "focusFollowMouse": true,
     "initialCols": 120,
@@ -79,7 +79,7 @@
                 "face": "JetBrainsMono NF",
                 "size": 16
             },
-            "opacity": 98,
+            "opacity": 100,
             "padding": "2",
             "scrollbarState": "hidden",
             "startingDirectory": "C:\\Users\\jyf\\code",
@@ -130,6 +130,12 @@
                 "hidden": false,
                 "name": "Developer PowerShell for VS 2022",
                 "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{16208362-94fc-5b1f-a491-5b2624d5ab56}",
+                "hidden": true,
+                "name": "Visual Studio Debug Console",
+                "source": "VSDebugConsole"
             }
         ]
     },

@@ -1,6 +1,6 @@
 # https://clangd.llvm.org/config
 CompileFlags:
-  Add: [ --target=x86_64-w64-windows-gnu -std=c++2b, -Wall, -Wno-unused-function, -Wno-unused-macros,-Wno-unused-member-function,-Wno-unused-template]
+  Add:  []
   Compiler: clang++  
 Style:
   FullyQualifiedNamespaces: NO
