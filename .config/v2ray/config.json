@@ -19,7 +19,7 @@
     },
     "inbounds": [
         {
-			"listen": "127.0.0.1",
+			"listen": "0.0.0.0",
             "port": 10086,
             "protocol": "vmess",
             "settings": {
@@ -46,7 +46,27 @@
 		},
 		{
 			"protocol": "blackhole",
-			"tag": "block"
+			"tag": "blockhole"
 		}
-	]
+	],
+	"routing": {
+        "domainStrategy": "IPIfNonMatch",
+        "rules": [
+            {
+                "type": "field",
+                "outboundTag": "blockhole",
+				"domain": [
+					"geosite:cn",
+					"geosite:private",
+					"domain:wycjyf.live"
+				],
+                "ip": [
+                    "geoip:private",
+                    "geoip:cn",
+					"ext:geoip-only-cn-private.dat:cn",
+					"ext:geoip-only-cn-private.dat:private"
+                ]
+            }
+        ]
+    }
 }
