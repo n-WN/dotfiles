@@ -193,7 +193,8 @@
 				"type": "field",
                 "balancerTag": "balancer",
 				"domain": [
-                    "geosite:geolocation-!cn"
+                    "geosite:geolocation-!cn",
+                    "domain:telegram.com"
 				]
 			},
             {
