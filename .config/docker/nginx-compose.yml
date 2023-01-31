@@ -10,15 +10,6 @@ services:
         - /var/www/docsify/:/var/www/docsify/
     network_mode: host
 
-  memos:
-    container_name: memos
-    image: neosmemo/memos:latest
-    restart: unless-stopped
-    volumes:
-      - /etc/memos/:/var/opt/memos
-    ports:
-      - 5230:5230
-
   excalidraw:
     image: 'excalidraw/excalidraw:latest'
     container_name: excalidraw
