@@ -194,7 +194,20 @@
                 "balancerTag": "balancer",
 				"domain": [
                     "geosite:geolocation-!cn",
-                    "domain:telegram.com"
+                    "domain:telegram.com",
+                    "domain:wycis.me"
+				]
+			},
+            {
+				"type": "field",
+                "balancerTag": "balancer",
+				"ip": [
+                    "149.154.175.100",
+                    "149.154.167.41",
+                    "149.154.175.55",
+                    "91.108.56.123",
+                    "149.154.167.92",
+                    "149.154.167.223"
 				]
 			},
             {

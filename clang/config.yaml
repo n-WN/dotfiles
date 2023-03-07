@@ -1,16 +1,16 @@
 # https://clangd.llvm.org/config
 CompileFlags:
-  Add:  []
+  Add:  [-xc++, -Wall]
+  Remove: -W*
   Compiler: clang++  
+Index:
+  Background: Skip
 Style:
   FullyQualifiedNamespaces: NO
 Diagnostics:
-  Suppress: Wunused
-  ClangTidy:
-    Add: modernize*
-    Remove: modernize-use-trailing-return-type
   UnusedIncludes: Strict
 InlayHints:
+  Designators: Yes
   Enabled: Yes
   ParameterNames: Yes
   DeducedTypes: Yes

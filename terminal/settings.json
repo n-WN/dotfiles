@@ -13,11 +13,11 @@
                 "action": "copy",
                 "singleLine": false
             },
-            "keys": "ctrl+shift+c"
+            "keys": "ctrl+c"
         },
         {
             "command": "paste",
-            "keys": "ctrl+shift+v"
+            "keys": "ctrl+v"
         },
         {
             "command": 
@@ -61,8 +61,8 @@
     "copyOnSelect": false,
     "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
     "focusFollowMouse": true,
-    "initialCols": 120,
-    "initialRows": 28,
+    "initialCols": 110,
+    "initialRows": 30,
     "launchMode": "focus",
     "minimizeToNotificationArea": true,
     "profiles": 
@@ -112,7 +112,7 @@
                 "source": "Windows.Terminal.Azure"
             },
             {
-                "commandline": "C:\\Users\\jyf\\scoop\\shims\\bash.exe --login -i",
+                "commandline": "C:\\Users\\jyf\\scoop\\apps\\git\\current\\bin\\bash.exe --login -i",
                 "guid": "{11a66a21-0c86-4522-aa0d-415cce5f172c}",
                 "hidden": false,
                 "icon": "C:\\Users\\jyf\\scoop\\apps\\git\\current\\usr\\share\\git\\git-for-windows.ico",

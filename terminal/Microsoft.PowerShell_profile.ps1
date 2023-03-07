@@ -26,8 +26,8 @@ function setproxy{
 		showproxy
 }
 function setsock{
-	$env:HTTP_PROXY="socks://127.0.0.1:10809"
-		$env:HTTPS_PROXY="socks://127.0.0.1:10809"
+	$env:HTTP_PROXY="socks://127.0.0.1:10808"
+    $env:HTTPS_PROXY="socks://127.0.0.1:10808"
 }
 
 function unsetproxy{
