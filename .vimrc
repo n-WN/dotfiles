@@ -3,17 +3,16 @@ set fileencoding=utf-8
 set fileencodings=utf-8,chinese,latin-1,gbk,gb18030,gk2312
 
 set laststatus=2
-set statusline=
-set statusline+=%#PmenuSel#
 set statusline+=\ %f
-set statusline+=%m\
+set statusline+=\ %M
+set statusline+=\ %R
 set statusline+=%=
+set statusline+=\ %{strftime('%T')}
 set statusline+=\ %y
 set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
 set statusline+=\[%{&fileformat}\]
 set statusline+=\ %l:%c
 set statusline+=\ %p%%
-set statusline+=\
 
 set listchars=tab:->\ 
 set backspace=indent,eol,start
@@ -44,7 +43,6 @@ set foldmethod=indent
 set foldlevel=100
 set linebreak
 set scrolloff=5
-set laststatus=2
 set ruler
 syntax on
 filetype indent on
