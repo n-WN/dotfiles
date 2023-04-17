@@ -1,23 +1,19 @@
-oh-my-posh init pwsh --config 'C:\Users\jyf\scoop\apps\oh-my-posh\current\themes\pure.omp.json' | Invoke-Expression
-Import-Module Terminal-Icons
+Invoke-Expression (&starship init powershell)
 
-# Set-PSReadlineKeyHandler -Key Tab -Function Complete # 设置 Tab 键补全
+$PSStyle.FileInfo.Directory = "`e[34m"
+
+Set-PSReadLineOption -EditMode vi
 Set-PSReadLineOption -PredictionSource History 
-Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete # 设置 Ctrl+d为菜单补全和
-Set-PSReadLineKeyHandler -Key "Ctrl+z" -Function Undo # 设置 Ctrl+z 为撤销
 Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
 Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
-Set-PSReadLineOption -EditMode vi
 Set-PSReadLineOption -BellStyle None
+
+Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
 
 function pro { vim $profile }
 function ll { ls.exe -al }
 function l { ls.exe -al }
-
-function pic {
-	  Set-Clipboard (-join ('![](' , $(picgo u | tail -n 1),')' ))
-	  Get-ClipBoard
-}
+function rmhis { Remove-Item $Env:APPDATA\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt }
 
 function setproxy{
 	$env:HTTP_PROXY="127.0.0.1:10809" 
@@ -32,13 +28,13 @@ function setsock{
 
 function unsetproxy{
 	$env:HTTP_PROXY=""
-		$env:HTTPS_PROXY=""
-		echo "unset proxy done"
+    $env:HTTPS_PROXY=""
+    echo "unset proxy done"
 }
 
 function showproxy{
 	echo "env:HTTP_PROXY = $env:HTTP_PROXY" 
-		echo "env:HTTPS_PROXY = $env:HTTPS_PROXY" 
+    echo "env:HTTPS_PROXY = $env:HTTPS_PROXY" 
 }
 
 function vmkill{

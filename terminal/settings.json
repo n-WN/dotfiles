@@ -4,6 +4,14 @@
     "actions": 
     [
         {
+            "command": 
+            {
+                "action": "globalSummon",
+                "toggleVisibility": true
+            },
+            "keys": "ctrl+shift+m"
+        },
+        {
             "command": "find",
             "keys": "ctrl+shift+f"
         },
@@ -20,12 +28,12 @@
             "keys": "ctrl+v"
         },
         {
-            "command": 
-            {
-                "action": "globalSummon",
-                "toggleVisibility": true
-            },
-            "keys": "ctrl+shift+m"
+            "command": "unbound",
+            "keys": "alt+shift+w"
+        },
+        {
+            "command": "unbound",
+            "keys": ""
         },
         {
             "command": 
@@ -41,14 +49,6 @@
             "keys": "ctrl+shift+w"
         },
         {
-            "command": "unbound",
-            "keys": "alt+shift+w"
-        },
-        {
-            "command": "unbound",
-            "keys": ""
-        },
-        {
             "command": "toggleFocusMode",
             "keys": "alt+z"
         }
@@ -59,7 +59,7 @@
     "centerOnLaunch": true,
     "copyFormatting": "none",
     "copyOnSelect": false,
-    "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+    "defaultProfile": "{d50cc00d-3d31-011d-3572-8494c9dafea6}",
     "focusFollowMouse": true,
     "initialCols": 110,
     "initialRows": 30,
@@ -69,6 +69,7 @@
     {
         "defaults": 
         {
+            "adjustIndistinguishableColors": "indexed",
             "bellStyle": "window",
             "closeOnExit": "always",
             "colorScheme": "One Half Dark",
@@ -77,22 +78,23 @@
             "font": 
             {
                 "face": "JetBrainsMono NF",
-                "size": 16
+                "size": 16.0
             },
+            "intenseTextStyle": "all",
             "opacity": 70,
             "padding": "2",
             "scrollbarState": "hidden",
             "startingDirectory": "C:\\Users\\jyf\\code",
-            "useAcrylic": true
+            "useAcrylic": true,
+            "useAtlasEngine": true
         },
         "list": 
         [
             {
-                "commandline": "C:\\Users\\jyf\\scoop\\shims\\pwsh.exe",
-                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "commandline": "C:/Program Files/PowerShell/7/pwsh.exe",
+                "guid": "{d50cc00d-3d31-011d-3572-8494c9dafea6}",
                 "hidden": false,
-                "name": "PowerShell",
-                "source": "Windows.Terminal.PowershellCore"
+                "name": "PowerShell"
             },
             {
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
@@ -106,18 +108,18 @@
                 "name": "Windows PowerShell"
             },
             {
-                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-                "hidden": false,
-                "name": "Azure Cloud Shell",
-                "source": "Windows.Terminal.Azure"
-            },
-            {
                 "commandline": "C:\\Users\\jyf\\scoop\\apps\\git\\current\\bin\\bash.exe --login -i",
                 "guid": "{11a66a21-0c86-4522-aa0d-415cce5f172c}",
                 "hidden": false,
                 "icon": "C:\\Users\\jyf\\scoop\\apps\\git\\current\\usr\\share\\git\\git-for-windows.ico",
                 "name": "git-bash",
                 "startingDirectory": "C:\\Users\\jyf\\code"
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": false,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
             },
             {
                 "guid": "{4a89c259-7619-5ac8-946e-1e75998f423d}",
@@ -349,6 +351,52 @@
             "yellow": "#A2734C"
         },
         {
+            "background": "#300A24",
+            "black": "#171421",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#08458F",
+            "brightCyan": "#2C9FB3",
+            "brightGreen": "#26A269",
+            "brightPurple": "#A347BA",
+            "brightRed": "#C01C28",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#A2734C",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#FFFFFF",
+            "green": "#26A269",
+            "name": "Ubuntu-22.04-ColorScheme",
+            "purple": "#881798",
+            "red": "#C21A23",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#A2734C"
+        },
+        {
+            "background": "#300A24",
+            "black": "#171421",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#08458F",
+            "brightCyan": "#2C9FB3",
+            "brightGreen": "#26A269",
+            "brightPurple": "#A347BA",
+            "brightRed": "#C01C28",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#A2734C",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#FFFFFF",
+            "green": "#26A269",
+            "name": "Ubuntu-ColorScheme",
+            "purple": "#881798",
+            "red": "#C21A23",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#A2734C"
+        },
+        {
             "background": "#000000",
             "black": "#000000",
             "blue": "#000080",
@@ -375,5 +423,6 @@
     "showTabsInTitlebar": true,
     "startOnUserLogin": true,
     "tabSwitcherMode": "mru",
+    "themes": [],
     "useAcrylicInTabRow": true
 }
